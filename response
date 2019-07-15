@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Not Ready for Publish">
+    <head>
+    </head>
+    <body>
+        <h1>Analyzing responses</h1>
+        <p>
+            <MadCap:xref href="#The">The general structure of a RESTful response:</MadCap:xref>
+        </p>
+        <p>
+            <MadCap:xref href="#Example">Example of a Workfront API response</MadCap:xref>
+        </p>
+        <p>
+            <MadCap:xref href="#Example2">Example of a Workfront API Response in Postman (Pretty)</MadCap:xref>
+        </p>
+        <p>
+            <MadCap:xref href="#Example3">Example of a Workfront API&#160;response in Postman (Raw)</MadCap:xref>
+        </p>
+        <p>
+            <MadCap:xref href="#How">How does a response become a program?</MadCap:xref>
+        </p>
+        <h2><a name="The"></a>The general structure of a RESTful response:</h2>
+        <p>After making a request the API&#160;server will return an HTTP&#160;Response:</p>
+        <ol>
+            <li><b>Status Code:</b> A three-digit code that indicates what type of Response has been sent. These codes typically fall under four categories:<ol><li><b>Information Responses:</b> These are represented by numbers in the 100's and give information about server status.</li><li><b>Successful Responses:</b> These are represented by numbers in the 200's and indicate that a particular request was successful.</li><li><b>Redirection messages:</b> These are represented by numbers in the 300's and indicate that a Request returned a Redirect Response.</li><li><b>Client Error Responses:</b> These are represented by numbers in the 400's and indicate that a Request returned an error Response.</li></ol></li>
+            <li><b>Headers:</b> Give more detail about the Response</li>
+            <li><b>Body:</b> The main information of the Response, based on the Resource and the corresponding Parameters made in the Request.</li>
+        </ol>
+        <p>In Postman, the status code is summarized in a menu, separate from the header and the body:</p>
+        <p>
+            <img src="../../Resources/Images/GETprojidSTAT.png" style="width: 544px;height: 284px;" />
+        </p>
+        <p>The header information can be accessed by selecting the "headers" option underneath the status code display:</p>
+        <p>
+            <img src="../../Resources/Images/GETprojidHEAD.png" />
+        </p>
+        <h2><a name="Example"></a>Example of a Workfront API response</h2>
+        <p>The Workfront API servers return responses in JSON, generally following the structure outlined above. Depending on what type of client you're using, the aesthetic of returns vary, but the information that is returned is identical. By default, Postman returns JSON repsonses in a 'pretty' format with the header information separated out into a different tab from the body.</p>
+        <p>Here is an example of a response from the Workfront API. This is a request made to view the details of a particular project.</p>
+        <p>General request:</p>
+        <div class="codesamp">https://{DOMAIN}.my.workfront.com/attask/api/v11.0/project/{PROJECTID}</div>
+        <p>Specific request for this example:</p>
+        <div class="codesamp">https://workfrontdocs.workfront.com/attask/api/v11.0/project/5d260d67002031daced35946cc3c1600</div>
+        <p>This is an unedited response from the Workfront API servers:</p>
+        <div class="codesamp">
+			{"data":{"ID":"5d260d67002031daced35946cc3c1600","name":"Example Project","objCode":"PROJ","percentComplete":0.0,"plannedCompletionDate":"2019-07-10T06:00:00:000-0600","plannedStartDate":"2019-07-10T06:00:00:000-0600","priority":2,"projectedCompletionDate":"2019-07-14T06:00:00:000-0600","status":"PLN"}}
+		</div>
+        <p>Notice that this exact same information can be formatted differently, to make it easier to read. In this case, line breaks are used to separate the project details:</p>
+        <div class="codesamp">
+            <p>{</p>
+            <p>"data": {</p>
+            <p>"ID": "5d260d67002031daced35946cc3c1600",</p>
+            <p>"name": "Example Project",</p>
+            <p>"objCode": "PROJ",</p>
+            <p>"percentComplete": 0,</p>
+            <p>"plannedCompletionDate": "2019-07-10T06:00:00:000-0600",</p>
+            <p>"plannedStartDate": "2019-07-10T06:00:00:000-0600",</p>
+            <p>"priority": 2,</p>
+            <p>"projectedCompletionDate": "2019-07-14T06:00:00:000-0600",</p>
+            <p>"status": "PLN"</p>
+            <p>}</p>
+            <p>}</p>
+        </div>
+        <h2><a name="Example2"></a>Example of a Workfront API Response in Postman (Pretty)</h2>
+        <p>This is what the Postman return looks like for the same GET request described above. The color coding, line breaks, and spacing automatically applied in the "Pretty" formatting option make the response easier to read and interpret. </p>
+        <p>
+            <img src="../../Resources/Images/GETprojidPRETTY.png" />
+        </p>
+        <h2><a name="Example3"></a>Example of a Workfront API&#160;response in Postman (Raw)</h2>
+        <p>The "raw" format option in Postman will return identical information to the pretty format, however there will be no spacing and no color coding. </p>
+        <p>
+            <img src="../../Resources/Images/GETprojidRAW.png" />
+        </p>
+        <h2><a name="How"></a>How does a response become a program?</h2>
+        <p>The response that you receive back from the Workfront API servers is the information that you'll use to create your program. Every time that you make a request to the API servers, you receive a response in the same format. Knowing this, you can construct code to automatically parse through the response, select the data that you want, then print that data to a file, publish it to a website, or anything else that you need your program to do.</p>
+    </body>
+</html>
