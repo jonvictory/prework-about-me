@@ -68,3 +68,39 @@ section > h1 {
   display: inline-block;
   margin: 0 5px;
 }
+blockquote.note
+{
+	border: solid 1px #1e90ff;
+	padding: 0px 0px 0px 8px;
+}
+
+div.codesamp
+{
+	background-color: #f5f5f5;
+	padding-left: 48px;
+}
+
+table.grey
+{
+	
+}
+
+tbody.grey
+{
+	
+}
+
+td.grey
+{
+	background: #dcdcdc;
+}
+
+th.grey
+{
+	background: #a9a9a9;
+}
+
+tr.grey
+{
+	background: #dcdcdc;
+}
