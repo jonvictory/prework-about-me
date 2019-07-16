@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Not Ready for Publish">
     <head>
+	    <title>RESTful Responses</title>
+	    <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <h1>Analyzing responses</h1>
@@ -28,11 +30,11 @@
         </ol>
         <p>In Postman, the status code is summarized in a menu, separate from the header and the body:</p>
         <p>
-            <img src="../../Resources/Images/GETprojidSTAT.png" style="width: 544px;height: 284px;" />
+            <img src="img/GETprojidSTAT.png" style="width: 544px;height: 284px;" />
         </p>
         <p>The header information can be accessed by selecting the "headers" option underneath the status code display:</p>
         <p>
-            <img src="../../Resources/Images/GETprojidHEAD.png" />
+            <img src="img/GETprojidHEAD.png" />
         </p>
         <h2><a name="Example"></a>Example of a Workfront API response</h2>
         <p>The Workfront API servers return responses in JSON, generally following the structure outlined above. Depending on what type of client you're using, the aesthetic of returns vary, but the information that is returned is identical. By default, Postman returns JSON repsonses in a 'pretty' format with the header information separated out into a different tab from the body.</p>
@@ -64,12 +66,12 @@
         <h2><a name="Example2"></a>Example of a Workfront API Response in Postman (Pretty)</h2>
         <p>This is what the Postman return looks like for the same GET request described above. The color coding, line breaks, and spacing automatically applied in the "Pretty" formatting option make the response easier to read and interpret. </p>
         <p>
-            <img src="../../Resources/Images/GETprojidPRETTY.png" />
+            <img src="img/GETprojidPRETTY.png" />
         </p>
         <h2><a name="Example3"></a>Example of a Workfront API&#160;response in Postman (Raw)</h2>
         <p>The "raw" format option in Postman will return identical information to the pretty format, however there will be no spacing and no color coding. </p>
         <p>
-            <img src="../../Resources/Images/GETprojidRAW.png" />
+            <img src="img/GETprojidRAW.png" />
         </p>
         <h2><a name="How"></a>How does a response become a program?</h2>
         <p>The response that you receive back from the Workfront API servers is the information that you'll use to create your program. Every time that you make a request to the API servers, you receive a response in the same format. Knowing this, you can construct code to automatically parse through the response, select the data that you want, then print that data to a file, publish it to a website, or anything else that you need your program to do.</p>
