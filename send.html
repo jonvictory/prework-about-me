@@ -11,7 +11,7 @@
     <body>
         <h1>Making Requests</h1>
         <p>
-		<a href="#RESTful">Anatomy of a Request</a></li>
+		<a href="#RESTful">Anatomy of a request</a></li>
         </p>
         <p>
 		<a href="#Examples">Examples of Workfront API&#160;Requests</a>
@@ -20,7 +20,7 @@
 		    <a href="https://jonvictory.github.io/prework-about-me/navigation">Return to Navigation</a>
 	    </p>
 	
-        <h2><a name="RESTful"></a>RESTful Requests</h2>
+        <h2><a name="RESTful"></a>Anatomy of a request</h2>
         <p>Requests are commands that  access information from an API server. When a request is made, the system will return resources based on the various components that are specified in your request. Generally speaking, all of your Requests should consist of:</p>
         <ul>
             <li><b>URI:</b> The Uniform Resource Identifier specifies the location of a particular Resource that can be called/accessed via Request.</li>
@@ -44,13 +44,13 @@
         </ul>
         <h2><a name="Examples"></a>Examples of Workfront API&#160;Requests</h2>
         <ul>
-            <li>This is an example of a URI for loging in to your Workfront instance. There is no endpoint because you aren't attempting to access a resource, but instead logging in.</li>
+            <p><li>This is an example of a URI for loging in to your Workfront instance. There is no endpoint because you aren't attempting to access a resource, but instead logging in.</li></p>
             <div class="codesamp">https://{DOMAIN}.my.workfront.com/attask/api/v11.0/login?username={ADMIN}&amp;password={PASSWORD}&amp;method=POST</div>
-            <li>This is an example of a request to create a new project called "BANANA":</li>
+            <p><li>This is an example of a request to create a new project called "BANANA":</li></p>
             <div class="codesamp">https://{DOMAIN}.my.workfront.com/attask/api/v11.0/project?name=BANANA&amp;sessionID={SESSION ID NUMBER}&amp;method=POST</div>
-            <li>This is an example of a request to update project "BANANA" with a new name "Stickball" (note that capitalization matters).</li>
+            <p><li>This is an example of a request to update project "BANANA" with a new name "Stickball" (note that capitalization matters).</li></p>
             <div class="codesamp">https://{DOMAIN}.my.workfront.com/attask/api/project?ID={PROJECT ID}&amp;name=Stickball&amp;sessionID={SESSION ID}&amp;method=PUT</div>
-            <li>This is an example of a request to create a new task called "Pancakes"</li>
+            <p><li>This is an example of a request to create a new task called "Pancakes"</li></p>
             <div class="codesamp">https://{DOMAIN}.my.workfront.com/attask/api/v11.0/task?name=Pancakes&amp;projectID={PROJECT ID}&amp;sessionID={SESSION ID}&amp;method=POST</div>
         </ul>
         <p>&#160;</p>
