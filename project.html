@@ -54,7 +54,20 @@
         <p>Here is an example of what that looks like in Postman:</p>
         <img src="img\REQexamp.png"/>
         <h2>Analyzing the Response</h2>
-        <p>Here are some interesting points to observe about this endpoint.</p>
+        <p>The response returned from the Workfront API contains information about the project that you just created in your instance of Workfront.</p>
+        <p>Notice how each field in the response has a descriptive name that tells you something different about the project:
+            <ul>
+                <li><p>ID: The ID field specifies the ID of the new project that you just created.</p></li>
+                <li><p>name: is the name that you assigned to the project.</p></li>
+                <li><p>objcode: is a code which refers to the type of object that was created.</p></li>
+                <li><p>percentcomplete: is the percent of how much of the project has been completed.</p></li>
+                <li><p>plannedStartDate: refers to the planned start date of the project</p></li>
+                <li><p>priority: is the level of priority that has been assigned to the project</p></li>
+                <li><p>plannedCompletionDate: refers to the planned completion date of the project</p></li>
+                <li><p>status: is what phase the project is in. For example, a new project should always begin in the planning phase, unless otherwise specified. The planning phase is denoted simply by "PLN".</p></li>
+                
+            </ul>
+        </p>
         <h2>Printing Values from the JSON Response</h2>
         <p>Making requests and viewing the endpoints are important steps in the processes of creating a program, but they don't necessarily have anything to do with the program itself. In order to create a program, the information that you are trying to obtain needs to be printed, stored, or updated somewhere. In this project, the information that you obtain from your request will be printed into a web document. This method is identical to the process that you would use if you were creating an API to send information to a hosted website. </p>
         <p>&#160;</p>
