@@ -14,11 +14,45 @@
 		    <a href="https://jonvictory.github.io/prework-about-me/navigation">Return to Navigation</a>
 	    </p>
         <h2>Download Postman</h2>
-        <p>The following project will be handled primarily with Postman. If you have not done so already, visit the Postman Site and download a free copy of their software to get started. </p>
+        <p>The following project will be handled primarily with Postman. If you have not done so already, visit <a href="https://www.getpostman.com/downloads/">GetPostman.com.</a> and download a free copy of their software to get started.</p>
         <h2>Obtain Authentication</h2>
-        <p>Before you can submit a request from the Workfront API, you'll need to obtain the proper authentication in order to get started. In this case, you can...</p>
-        <h2>Make a Request Using Postman</h2>
-        <p>When working with unfamiliar endpoints in any API system, submitting a request to an endpoint allows you to look at a response so you can better decide how to parse the information being returned from that endpoint and method.</p>
+        <p>Before you can submit a request from the Workfront API, you'll need to obtain the proper authentication in order to get started. This example shows how to establish authentication by logging in and obtaining a session ID, which will be used to validate all of your requests.</p>
+        <ol>
+            <li><p>Using Postman, send the following request in order to log in to your instance of Workfront:</p>
+                <div class="codesamp">https://<i><b>YourDomain</b></i>.workfront.com/attask/api/login?username=<i><b>YourUserName</b></i>>&password=<i><b>YourPassword</b></i>>&meth=post</div>
+                <p>Here is an example of a complete URI and where to enter it in Postman:</p>
+                <img src="\LOGINexample.png"/>
+            </li>
+            <li><p>If the information that you sent as a request is correct, you will have received a 200 status response in the response header summary like this:</p></li>
+            <img src="img\LOGIN200response.png"/>
+            <p>The full response contains information about your account, which API version you're accessing, and other information that is unique to your login:</p>
+            <img src="img\LOGINresponse.png"/>
+            <li><p>Locate the "sessionID" field in the response and copy the ID that follows the "sessionID" heading, excluding the quoatation marks that surround the actual ID</p></li>
+            <img src="img\LOGINrespSESH.png"/>
+            <li><p>This session ID is used to authenticate your requests. Include it at as the last parameter in all your requests, just before your method, seperating it from the other parameters using an ampersand.</p></li>
+            <img src="img/HEADparam.png" style="width: 800px;height: 35px;">
+
+        </ol>
+        <h2>Make a request</h2>
+        <p>In the Workfront API, a request can complete all of the actions as defined by the RESTful CRUD acronym:</p>
+            <ul>
+                <li><b>C</b>reate</li>
+                <li><b>R</b>ead</li>
+                <li><b>U</b>pdate</li>
+                <li><b>D</b>elete</li>
+            </ul>
+        <p>The corresponding RESTful HTTP operations to the aforementioned actions are:</p>
+        <ul>
+            <li><p>POST: allows you create a new object</p></li>
+            <li><p>GET: allows you to view an object</p>GET</li>
+            <li><p>PUT: allows you to update an already existing object with new information</p></li>
+            <li><p>DELETE: allows you to delete an existing object</p></li>
+        </ul>
+        <p>Create a new project in your instance of Workfront by using the following URI:</p>
+        <div class="codesamp">https://<i><b>YourDomain</b></i>.workfront.com/attask/api/v11.0/project?name=<i><b>Name of New Project</b></i>&sessionID=<i><b>YourSessionID</b></i></div>
+        <blockquote class="note">Notice that spaces are permitted in the project name parameter.</blockquote>
+        <p>Here is an example of what that looks like in Postman:</p>
+        <img src="C:\Users\jonhuynh\Documents\ScreenSchott\POSTMAN\REQexamp.png"/>
         <h2>Analyzing the Response</h2>
         <p>Here are some interesting points to observe about this endpoint.</p>
         <h2>Printing Values from the JSON Response</h2>
