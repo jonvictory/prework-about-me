@@ -21,9 +21,9 @@
             <li><p>Using Postman, send the following request in order to log in to your instance of Workfront:</p>
                 <div class="codesamp">https://<i><b>YourDomain</b></i>.workfront.com/attask/api/login?username=<i><b>YourUserName</b></i>>&password=<i><b>YourPassword</b></i>>&meth=post</div>
                 <p>Here is an example of a complete URI and where to enter it in Postman:</p>
-                <img src="\LOGINexample.png"/>
+                <img src="img\LOGINexample.png"/>
             </li>
-            <li><p>If the information that you sent as a request is correct, you will have received a 200 status response in the response header summary like this:</p></li>
+            <li><p>If the information that you sent as a request is correct, you received a 200 status response in the response header summary like this:</p></li>
             <img src="img\LOGIN200response.png"/>
             <p>The full response contains information about your account, which API version you're accessing, and other information that is unique to your login:</p>
             <img src="img\LOGINresponse.png"/>
@@ -44,15 +44,15 @@
         <p>The corresponding RESTful HTTP operations to the aforementioned actions are:</p>
         <ul>
             <li><p>POST: allows you create a new object</p></li>
-            <li><p>GET: allows you to view an object</p>GET</li>
+            <li><p>GET: allows you to view an object</p></li>
             <li><p>PUT: allows you to update an already existing object with new information</p></li>
             <li><p>DELETE: allows you to delete an existing object</p></li>
         </ul>
-        <p>Create a new project in your instance of Workfront by using the following URI:</p>
+        <p>Create a new project in your instance of Workfront by using the following URI and the POST method:</p>
         <div class="codesamp">https://<i><b>YourDomain</b></i>.workfront.com/attask/api/v11.0/project?name=<i><b>Name of New Project</b></i>&sessionID=<i><b>YourSessionID</b></i></div>
         <blockquote class="note">Notice that spaces are permitted in the project name parameter.</blockquote>
         <p>Here is an example of what that looks like in Postman:</p>
-        <img src="C:\Users\jonhuynh\Documents\ScreenSchott\POSTMAN\REQexamp.png"/>
+        <img src="img\REQexamp.png"/>
         <h2>Analyzing the Response</h2>
         <p>Here are some interesting points to observe about this endpoint.</p>
         <h2>Printing Values from the JSON Response</h2>
