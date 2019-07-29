@@ -2,6 +2,8 @@ body {
     color: #222222;
     font-size: 1em;
     font-family: "Open Sans", "Helvetica Neue", sans-serif;
+	margin: 3% 5% 3% 5%;
+	border: 10% solid #E3E3E3;
 }
 
 .content-footer,
@@ -67,4 +69,40 @@ section > h1 {
 .social > li {
   display: inline-block;
   margin: 0 5px;
+}
+blockquote.note
+{
+	border: solid 1px #1e90ff;
+	padding: 0px 0px 0px 8px;
+}
+
+div.codesamp
+{
+	background-color: #E6E6E6;
+	padding-left: 48px;
+}
+
+table.grey
+{
+	
+}
+
+tbody.grey
+{
+	
+}
+
+td.grey
+{
+	background: #dcdcdc;
+}
+
+th.grey
+{
+	background: #a9a9a9;
+}
+
+tr.grey
+{
+	background: #dcdcdc;
 }
